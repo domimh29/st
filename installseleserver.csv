@@ -1,0 +1,109 @@
+Experiment No. 05
+Title: Install Selenium Server and demonstrate it using the script in
+JAVA/PHP.
+Following is the step by step process of installation of selenium server
+ Install Java:
+Download and install a compatible Java Development Kit (JDK) from the Oracle website and
+configure environment variables like JAVA_HOME and PATH.
+ Download Selenium Server:
+Go to the Selenium website and download the latest standalone Selenium server JAR file.
+ Install Browser Drivers (if needed):
+Depending on the browsers you want to test, download and install the corresponding browser
+drivers (e.g., ChromeDriver for Chrome, GeckoDriver for Firefox).
+ Run the Selenium Server:
+Open a command prompt, navigate to the directory where you saved the Selenium JAR file,
+and execute the command java -jar selenium-server-standalone.jar to start the server.
+Selenium IDE (Integrated Development Environment) is a browser-based tool that provides
+an easy way to create, edit, and run test scripts for web applications. Here is a step-by-step
+guide to using Selenium IDE:
+Step 1: Install Selenium IDE
+19. Install the browser extension:
+1. Go to the Selenium IDE official website.
+2. Install the extension for your preferred browser (e.g., Chrome or Firefox).
+20. After installation, the Selenium IDE icon should appear in your browser's toolbar.
+Step 2: Launch Selenium IDE
+21. Click on the Selenium IDE icon in your browser to launch the tool.
+22. Select one of the following options:
+1. Create a New Project: Start a new test case from scratch.
+2. Open an Existing Project: Load a previously saved project.
+3. Record a New Test: Start recording user actions on a webpage.
+Step 3: Create a Test Case
+23. Start Recording:
+1. Click on "Record a new test in a new project."
+2. Enter a project name and the starting URL of the web application you want to
+test.
+3. The browser will open with Selenium IDE recording all your actions.
+24. Perform Actions:
+1. Navigate through the web application as needed. Selenium IDE will
+automatically capture actions like:
+1. Clicking buttons.
+2. Filling in forms.
+3. Selecting dropdown values.
+4. Navigating between pages.
+25. Stop Recording:
+1. When done, click the "Stop Recording" button in the Selenium IDE
+interface.
+Step 4: Edit Test Steps
+26. After recording, you’ll see a list of test steps in the IDE. Each step includes:
+1. Command: The Selenium action (e.g., click, type, assert).
+2. Target: The element locator (e.g., CSS Selector, XPath).
+3. Value: The input value for certain commands.
+27. You can manually edit these steps:
+1. Add new steps using the "Add Command" option.
+2. Modify locators for improved accuracy.
+3. Change the test logic as needed.
+Step 5: Run the Test Case
+28. Run the Test:
+1. Select the test case in the left pane.
+2. Click the "Run Current Test" button.
+29. View Results:
+1. The log panel displays the execution status for each step (e.g., Passed, Failed).
+2. Errors or failures will be highlighted.
+Step 6: Add Assertions
+30. Assertions validate the behaviour of the application.
+1. For example, ensure a specific element or text is present on the page.
+31. To add assertions:
+1. Right-click on the desired web element.
+2. Select "Show Available Commands" and choose an assertion (e.g.,
+assertText, verifyElementPresent).
+Step 7: Save the Project
+32. Save your test case and project by clicking the Save icon.
+33. This saves the project as a .side file.
+Step 8: Export Test Case
+34. Selenium IDE allows you to export test cases in various programming languages (e.g.,
+Java, Python).
+1. Click the Export button.
+2. Choose the desired format and save the file.
+35. Use this file with Selenium WebDriver for advanced automation scenarios.
+Step 9: Debug and Refine
+1. If a test case fails:
+1. Check the error logs for details.
+2. Edit the test steps or adjust locators to resolve the issue.
+2. Use the Pause and Step Over features to debug step by step.
+Step 10: Create Test Suites
+ Group multiple test cases into a test suite for batch execution.
+ Use the Test Suite panel to organize your test cases.
+ Run the suite to execute all test cases sequentially.
+Step 11: Use Plugins
+1. Selenium IDE supports plugins to extend its functionality.
+1. Install plugins for data-driven testing, advanced locators, etc.
+2. Browse plugins in the Selenium IDE's plugin store.
+
+from selenium import webdriver
+Set up Selenium server address
+server_address = "http://172.16.16.1:8090/ "
+# Create a WebDriver instance
+driver = webdriver.Remote(command_executor=server_address,
+desired_capabilities={"browserName": "chrome"})
+# Navigate to website
+driver.get("https://www.gmail.com")
+# Perform test actions (e.g., click a button, fill a form)
+login_button = driver.find_element_by_id("login-button")
+login_button.click()
+# Close the browser
+driver.quit()
+
+
+Conclusion
+Thus we have successfully installed selenium automation testing IDE on chrome browser and
+tested it for website www.gmail.com, www.google.com and JavaScript. 
