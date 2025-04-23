@@ -1,0 +1,29 @@
+Test case ID,Test Case Description,Preconditions,Test Steps,Expected Result,Actual Result,Status
+TC001,Verify the login screen will appear after click on login page,Enter the correct URL,"1. Enter the valid URL
+2. Click the URL",Login screen will appear,Login screen appeared,Pass
+TC002,Enter a valid username & valid password,Valid URL, Test data,"1. Enter Valid Email
+2. Enter valid password
+3. Click on login Button",Successful login,Successful login,Pass
+TC003,Enter a valid username & invalid password,Valid URL, Test data,"1. Enter Valid Email
+2. Enter invalid password
+3. Click on login Button",Error message,Error message "Invalid password",Pass
+TC004,Enter a invalid username,Valid URL, Test data,"1. Enter invalid Email
+2. Click on next Button",Error message,Error message "Invalid email",Pass
+TC005,When user open the login page the cursor should remain in the email text box,Enter the correct URL & check the email text box,"1. Enter the valid URL
+2. Click the URL",Cursor should be in the email text box,Cursor should be in the email text box,Pass
+TC006,Verify after click on the next button password field should be display,Provide correct email and click on next button,"1. Enter email
+2. Click on next button
+3. Verify password field",Password field should be displayed,Password field should be displayed,Pass
+TC007,Verify the error message should be display after entering invalid email format,Enter invalid syntax for email, Check the correct button & click the next button,"1. Enter invalid email
+2. Click on next button",Error message,Error message "Invalid email",Pass
+TC008,Verify after click on next button password field is disable or not,Click the correct button & check the password field,"1. Click next button
+2. Check the password field",Password field filled box,Password field displayed,Pass
+TC009,Verify whether eye icon is added to the password field or not,Click the correct button & check the password field,"1. Click next button
+2. Check the password field",Password should be visible,Password should be visible,Pass
+TC010,Verify the error message should display after entering the invalid password,Enter invalid syntax for password,"1. Enter Valid Email
+2. Enter invalid password
+3. Click on login Button",Error message,Error message,Pass
+TC011,Verify after click on forgot email link is disable or not,Click the forgot email link,"1. Enter the valid URL
+2. Click the forgot email link",Successfully forgot email link opened,Successfully forgot email link opened,Pass
+TC012,Verify after click on forgot password link is disable or not,Click the forgot password link,"1. Enter the valid URL
+2. Click the forgot password link",Successfully forgot password link opened,Successfully forgot password link opened,Pass
